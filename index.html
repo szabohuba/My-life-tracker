@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-sacel=1.0">
+
+    <title>Szabo Huba Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+
+    </head>
+
+    <body>
+
+        <section class="header">
+            <nav>
+                <a href="index.html">
+                    <img src="my_img/sapi.png" >
+                </a>
+
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">COURSES</a></li>
+                        <li><a href="">BLOG</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="text-box">
+
+
+                <h1>Szabo Huba's student Webpage</h1>
+                <p>“Be alone, that is the secret of invention; be alone, that is when ideas are born.” <br>~Nicola Tesla~</p>
+                <a href="" class="hero-btn">Follow me!</a>
+
+            </div>
+
+        </section>
+<!--Kurzusaim szekcio-->
+            
+           
+
+            <section class="course">
+                <h1>My Courses</h1>
+                <p>Some of my current courses I applied for.</p>
+
+
+                <div class="row">
+                    <div class="course-col">
+                    <h3>Adatszerkezetek</h3>
+                    <p>In computer science, a data structure is a data organization, management,
+                         and storage format that is usually chosen for efficient access to data.
+                          More precisely, a data structure is a collection of data values,
+                          the relationships among them, and the functions or operations that can be applied
+                           to the data,[4] i.e., it is an algebraic structure about data.</p>
+                        </div>
+                    <div class="course-col">
+                            <h3>FPGA</h3>
+                            <p>A field-programmable gate array (FPGA) is an electronic device that includes digital logic circuitry you can program to customize its functionality.</p>
+                                </div>
+                    <div class="course-col">
+                                    <h3>Objektum Orientalt Programozas</h3>
+                                    <p>Object-oriented programming (OOP) is a computer programming model that organizes software design around data, or objects, rather than functions and logic. An object can be defined as a data field that has unique attributes and behavior.</p>
+                                        </div>
+                </div>
+                
+
+
+
+            </section>
+
+
+
+<!--Kurzusaim szekcio-->
+<section class="campus">
+    <h1>My student campus</h1>
+    <p>Introduction to my university campus</p>
+
+
+
+
+
+
+<!------------------------JavaScript for menu show and hide------------------------------>
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+
+
+    </body>
+
+
+
+
+
+
+
+</html>
