@@ -376,7 +376,7 @@ h3{
 }
 
 .sub-header h1{
-    margin-top: 100px;
+    margin-top: 65px;
 }
 
 .about-us{
@@ -399,17 +399,103 @@ h3{
     font-size: 20px;
 }
 
+/*---------------------------------Contact form---------------------------------------*/
+
+.container{
+    width: 80%;
+    margin: 50px auto;
+}
 
 
+.contact-box{
+    background: #fff;
+    display: flex;
+}
 
+.contact-left{
+    flex-basis: 60%;
+    padding:40px 60px;
+    background: #777;
+    color: #fff;
 
+}
 
+.contact-right{
+    flex-basis: 60%;
+    padding:40px 60px;
+    background: #0d5a1d;
+    color: #fff;
 
+}
 
+.container h1{
+    margin-bottom: 10px;
+}
 
+.container h1{
+    color: #0d5a1d;
+    text-align: center;
+    padding-bottom: 35px;;
+}
 
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
+.input-row .input-grup{
+    flex-basis: 45%;
+}
 
+input{
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+
+}
+
+textarea{
+    width:100%;
+    border:1px solid  #000;
+    outline:none;
+    padding:10px;
+}
+
+label{
+    margin-bottom: 6px;
+    display: block;
+    color:#fff;
+}
+
+button{
+    background:#fff;
+    width: 100px;
+    border: 1px solid  #000;
+    outline: none;
+    color: #000;
+    height: 40px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px rgba(42, 42, 44, 0.3);
+
+}
+
+.contact-left h3{
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+tr td:first-child{
+    padding-right: 20px;
+
+}
+
+tr td{
+    padding-top: 20px;
+}
 
 
 

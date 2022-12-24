@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-sacel=1.0">
+
+    <title>Szabo Huba Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    </head>
+
+    <body>
+
+        <section class="sub-header">
+            <nav>
+                <a href="index.html">
+                    <img src="my_img/sapi.png" >
+                </a>
+
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">COURSES</a></li>
+                        <li><a href="">TRACKER</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <h1>Send me your toughts!</h1>
+        </section>
+
+
+
+<section class="contact-form">
+
+     <div class="container">
+        <h1>Connect with me!</h1>
+        <div class="contact-box">
+
+            <div class="contact-left">
+                <h3>Send me your toughts!</h3>
+                <form>
+
+                    <div class="input-row">
+                        <div class="input-grup">
+                            <label>Name:</label>
+                            <input type="text" placeholder="Your name">
+                         </div>
+
+                         <div class="input-grup">
+                            <label>Phone:</label>
+                            <input type="text" placeholder="Your phone number">
+                         </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-grup">
+                            <label>E-mail:</label>
+                            <input type="mail" placeholder="Your mail adress">
+                         </div>
+
+                         <div class="input-grup">
+                            <label>Subject:</label>
+                            <input type="text" placeholder="Your phone number">
+                         </div>
+                    </div>
+
+                    <label>Message:</label>
+                    <textarea rows="10" placeholder="Your message"></textarea>
+
+                    <button type="submit">Send</button>
+
+                </form>
+
+
+            </div>
+
+
+            <div class="contact-right">
+                <h3>Reach me!</h3>
+                <table> 
+                    <tr>
+                        <td>Email:</td>
+                        <td>huba.sz22@gmail.com</td>
+                    </tr>
+
+                    <tr>
+                        <td>Phone:</td>
+                        <td>+4072334422</td>
+                    </tr>
+
+                    <tr>
+                        <td>Adress:</td>
+                        <td>Str. XXXXX, NR YYYYYYY, Mures, Mures</td>
+                    </tr>
+
+                    <tr>
+                        <td>Post code: </td>
+                        <td>515515</td>
+                    </tr>
+
+
+                </table>
+
+
+
+            </div>
+
+
+
+         </div>
+
+        </div>
+
+
+
+
+    
+
+
+    </section>
+
+
+
+
+
+    <section class="footer">
+        <h4>Send me a message!</h4>
+        <p>Learn to understand others, it will help you on your journey.</p>
+    
+        <div class="icons">
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-google"></i>
+            <i class="fa fa-linkedin"></i>
+            
+    
+    
+    
+        </div>
+    
+    </section>
+
+
+
+<!------------------------JavaScript for menu show and hide------------------------------>
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+
+
+    </body>
+
+
+</html>
