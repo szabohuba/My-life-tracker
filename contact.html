@@ -30,7 +30,7 @@
                     </ul>
 
                 </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
+                
             </nav>
 
             <h1>Send me your toughts!</h1>
@@ -46,8 +46,11 @@
 
             <div class="contact-left">
                 <h3>Send me your toughts!</h3>
-                <form onsubmit="sendEmail(); reset(); return false;" >
 
+
+
+
+                <form onsubmit="sendEmail(); reset(); return false;">
                     <div class="input-row">
                         <div class="input-grup">
                             <label>Name:</label>
@@ -73,9 +76,10 @@
                     </div>
 
                     <label>Message:</label>
-                    <textarea rows="10" id="subject" placeholder="Your message" required></textarea>
+                    <textarea rows="10" id="text" placeholder="Your message" required></textarea>
 
                     <button type="submit">Send</button>
+
 
                 </form>
 
@@ -121,31 +125,9 @@
 
         </div>
 
-
-
-
-    
-
-
     </section>
 
 
-
-
-
-    <section class="footer">
-        <h4>My social media accounts</h4>
-        <p>Learn to understand others, it will help you on your journey.</p>
-    
-        <div class="icons">
-    
-            <a href="https://www.linkedin.com/in/huba-szabo-0b47261bb/" class="fa fa-linkedin"></a>
-            <a href="https://github.com/szabohuba" class="fa fa-github"></a>
-            <a href="https://www.instagram.com/tailor_hubi/" class="fa fa-instagram"></a>
-    
-        </div>
-    
-    </section>
 
 
 <!------------------------JavaScript for menu show and hide------------------------------>
@@ -164,31 +146,42 @@
 
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-
 <script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "huba.sz23@gmail.com",
+            Password : "eiaziqndwluhjgzi",
+            To : 'redpapper11@gmail.com',
+            From : document.getElementById("mail").value,
+            Subject : document.getElementById("subject").value,
+            Body : "Name: "+document.getElementById("name").value 
+                   +"<br>Phone no: "+document.getElementById("phone").value+
+                   +"<br>Mail: "+document.getElementById("mail").value+
+                   +"<br>Subject: "+document.getElementById("subject").value+
+                   +"<br>Message: "+document.getElementById("message").value
+        }).then(
+          message => alert(message)
+    )};
 
-function sendEmail(){
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "huba.sz23@gmail.com",
-        Password : "c140c1c17c140c1c17",
-        To : 'redpapper11@gmail.com',
-        From : document.getElementById("mail").value,
-        Subject : document.getElementById("subject").value,
-        Body : "Name: "+document.getElementById("name").value 
-               +"<br>Phone no: "+document.getElementById("phone").value+
-               +"<br>Mail: "+document.getElementById("mail").value+
-               +"<br>Subject: "+document.getElementById("subject").value+
-               +"<br>Message: "+document.getElementById("message").value
-    }).then(
-      message => alert("Message sent succesful!")
-    );
 
-}
 
 </script>
 
 
+<section class="footer">
+    <h4>My social media accounts</h4>
+    <p>Learn to understand others, it will help you on your journey.</p>
+
+    <div class="icons">
+
+        <a href="https://www.linkedin.com/in/huba-szabo-0b47261bb/" class="fa fa-linkedin"></a>
+        <a href="https://github.com/szabohuba" class="fa fa-github"></a>
+        <a href="https://www.instagram.com/tailor_hubi/" class="fa fa-instagram"></a>
+
+    </div>
+
+</section>
 
     </body>
 
