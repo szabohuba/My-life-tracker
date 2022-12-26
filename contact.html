@@ -22,11 +22,11 @@
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">COURSES</a></li>
-                        <li><a href="">TRACKER</a></li>
-                        <li><a href="">CONTACT</a></li>
+                        <li><a href="/Users/szabohuba/Documents/GitHub/My-life-tracker/index.html">HOME</a></li>
+                        <li><a href="/Users/szabohuba/Documents/GitHub/My-life-tracker/about.html">ABOUT</a></li>
+                        <li><a href="/Users/szabohuba/Documents/GitHub/My-life-tracker/courses.html">COURSES</a></li>
+                        <li><a href="/Users/szabohuba/Documents/GitHub/My-life-tracker/track.html">TRACK</a></li>
+                        <li><a href="/Users/szabohuba/Documents/GitHub/My-life-tracker/contact.html">CONTACT</a></li>
                     </ul>
 
                 </div>
@@ -46,34 +46,34 @@
 
             <div class="contact-left">
                 <h3>Send me your toughts!</h3>
-                <form>
+                <form onsubmit="sendEmail(); reset(); return false;" >
 
                     <div class="input-row">
                         <div class="input-grup">
                             <label>Name:</label>
-                            <input type="text" placeholder="Your name">
+                            <input type="text" id="name" placeholder="Your name" required>
                          </div>
 
                          <div class="input-grup">
                             <label>Phone:</label>
-                            <input type="text" placeholder="Your phone number">
+                            <input type="text" id="phone" placeholder="Your phone number" required>
                          </div>
                     </div>
 
                     <div class="input-row">
                         <div class="input-grup">
                             <label>E-mail:</label>
-                            <input type="mail" placeholder="Your mail adress">
+                            <input type="mail" id="mail" placeholder="Your mail adress" required>
                          </div>
 
                          <div class="input-grup">
                             <label>Subject:</label>
-                            <input type="text" placeholder="Your phone number">
+                            <input type="text" id="subject" placeholder="Subject" required>
                          </div>
                     </div>
 
                     <label>Message:</label>
-                    <textarea rows="10" placeholder="Your message"></textarea>
+                    <textarea rows="10" id="subject" placeholder="Your message" required></textarea>
 
                     <button type="submit">Send</button>
 
@@ -81,6 +81,8 @@
 
 
             </div>
+
+            
 
 
             <div class="contact-right">
@@ -132,21 +134,18 @@
 
 
     <section class="footer">
-        <h4>Send me a message!</h4>
+        <h4>My social media accounts</h4>
         <p>Learn to understand others, it will help you on your journey.</p>
     
         <div class="icons">
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-google"></i>
-            <i class="fa fa-linkedin"></i>
-            
     
-    
+            <a href="https://www.linkedin.com/in/huba-szabo-0b47261bb/" class="fa fa-linkedin"></a>
+            <a href="https://github.com/szabohuba" class="fa fa-github"></a>
+            <a href="https://www.instagram.com/tailor_hubi/" class="fa fa-instagram"></a>
     
         </div>
     
     </section>
-
 
 
 <!------------------------JavaScript for menu show and hide------------------------------>
@@ -159,6 +158,34 @@
     function hideMenu(){
         navLinks.style.right = "-200px";
     }
+</script>
+
+<!------------------------JavaScript for sending mail------------------------------>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+<script>
+
+function sendEmail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "huba.sz23@gmail.com",
+        Password : "c140c1c17c140c1c17",
+        To : 'redpapper11@gmail.com',
+        From : document.getElementById("mail").value,
+        Subject : document.getElementById("subject").value,
+        Body : "Name: "+document.getElementById("name").value 
+               +"<br>Phone no: "+document.getElementById("phone").value+
+               +"<br>Mail: "+document.getElementById("mail").value+
+               +"<br>Subject: "+document.getElementById("subject").value+
+               +"<br>Message: "+document.getElementById("message").value
+    }).then(
+      message => alert("Message sent succesful!")
+    );
+
+}
+
 </script>
 
 
