@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>src="https://smtpjs.com/v3/smtp.js"</script>
 
 
     </head>
@@ -78,11 +79,9 @@
                     <label>Message:</label>
                     <textarea rows="10" id="text" placeholder="Your message" required></textarea>
 
-                    <button type="submit">Send</button>
-
-
+                    <button onClick="sendEmail()">Submit</button>
+                   
                 </form>
-
 
             </div>
 
@@ -130,38 +129,21 @@
 
 
 
-<!------------------------JavaScript for menu show and hide------------------------------>
-<script>
-    var navLinks = document.getElementById("navLinks");
-    function showMenu(){
-        navLinks.style.right = "0";
-    }
-
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    }
-</script>
 
 <!------------------------JavaScript for sending mail------------------------------>
-
-<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 <script>
     function sendEmail(){
         Email.send({
-            Host : "smtp.gmail.com",
-            Username : "huba.sz23@gmail.com",
-            Password : "eiaziqndwluhjgzi",
+            Host : "smtp.elasticmail.com",
+            Username : "redpapper11@gmail.com",
+            Password : "09F92572F386AF749173E9810078ED1E349A",
             To : 'redpapper11@gmail.com',
             From : document.getElementById("mail").value,
             Subject : document.getElementById("subject").value,
-            Body : "Name: "+document.getElementById("name").value 
-                   +"<br>Phone no: "+document.getElementById("phone").value+
-                   +"<br>Mail: "+document.getElementById("mail").value+
-                   +"<br>Subject: "+document.getElementById("subject").value+
-                   +"<br>Message: "+document.getElementById("message").value
+            Body : "this is the body"
         }).then(
-          message => alert(message)
+          message => alert("I recivied your mail.")
     )};
 
 
