@@ -7,9 +7,29 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>src="https://smtpjs.com/v3/smtp.js"</script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <script src="script.js" type="text/javascript"></script>
 
 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init("CXHogjOhghho6iKv8");
+   })();
+
+    </script>
+
+
+
+
+
+
+
+
+    
     </head>
 
     <body>
@@ -23,11 +43,11 @@
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="/Users/szabohuba/Documents/GitHub/My-life-tracker/index.html">HOME</a></li>
-                        <li><a href="/Users/szabohuba/Documents/GitHub/My-life-tracker/about.html">ABOUT</a></li>
-                        <li><a href="/Users/szabohuba/Documents/GitHub/My-life-tracker/courses.html">COURSES</a></li>
-                        <li><a href="/Users/szabohuba/Documents/GitHub/My-life-tracker/track.html">TRACK</a></li>
-                        <li><a href="/Users/szabohuba/Documents/GitHub/My-life-tracker/contact.html">CONTACT</a></li>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="courses.html">COURSES</a></li>
+                        <li><a href="track.html">TRACK</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
                     </ul>
 
                 </div>
@@ -49,37 +69,36 @@
                 <h3>Send me your toughts!</h3>
 
 
+                <form id="contact-form-id" onsubmit="return false;">
 
-
-                <form onsubmit="sendEmail(); reset(); return false;">
                     <div class="input-row">
                         <div class="input-grup">
                             <label>Name:</label>
-                            <input type="text" id="name" placeholder="Your name" required>
+                            <input type="text" id="name_id" placeholder="Your name" required>
                          </div>
 
                          <div class="input-grup">
                             <label>Phone:</label>
-                            <input type="text" id="phone" placeholder="Your phone number" required>
+                            <input type="tel" id="phone_id" placeholder="Your phone number" required>
                          </div>
                     </div>
 
                     <div class="input-row">
                         <div class="input-grup">
                             <label>E-mail:</label>
-                            <input type="mail" id="mail" placeholder="Your mail adress" required>
+                            <input type="email" id="mail_id" placeholder="Your mail adress" required>
                          </div>
 
                          <div class="input-grup">
                             <label>Subject:</label>
-                            <input type="text" id="subject" placeholder="Subject" required>
+                            <input type="text" id="subject_id" placeholder="Subject" required>
                          </div>
                     </div>
 
                     <label>Message:</label>
-                    <textarea rows="10" id="text" placeholder="Your message" required></textarea>
+                    <textarea rows="10" id="message_id" placeholder="Your message" required></textarea>
 
-                    <button onClick="sendEmail()">Submit</button>
+                    <button onclick="sendMail()" >Submit</button>
                    
                 </form>
 
@@ -132,23 +151,8 @@
 
 <!------------------------JavaScript for sending mail------------------------------>
 
-<script>
-    function sendEmail(){
-        Email.send({
-            Host : "smtp.elasticmail.com",
-            Username : "redpapper11@gmail.com",
-            Password : "09F92572F386AF749173E9810078ED1E349A",
-            To : 'redpapper11@gmail.com',
-            From : document.getElementById("mail").value,
-            Subject : document.getElementById("subject").value,
-            Body : "this is the body"
-        }).then(
-          message => alert("I recivied your mail.")
-    )};
 
 
-
-</script>
 
 
 <section class="footer">
